@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quintessential&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+</head>
+
+<style>
+  body {
+    background: #0f1228;
+    overflow-x: hidden;
+    color: #e7e9f0;
+    font-family: 'Lato', sans-serif;
+
+  }
+
+  input {
+
+    width: 350px;
+    border: none;
+    background: none;
+    height: 30px;
+    font-size: xx-large;
+    color: white;
+    outline: none;
+
+    border-bottom: 2px solid red;
+
+  }
+
+
+
+
+  #movies {
+
+    height: 300px;
+    width: 350px;
+    overflow: scroll;
+    display: none;
+
+
+  }
+
+  #scrolldiv {
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    background-color: #0f1228;
+    font-size: small;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    width: 100%;
+
+  }
+
+  #scrolldiv>div {
+    height: 50%;
+
+  }
+
+  #movieDiv {
+    width: fit-content;
+    width: 25%;
+  }
+
+  .image {
+    height: 100%;
+    width: 100%;
+
+  }
+
+  .main_container {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    line-height: 0;
+  }
+
+  .header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .search {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .main>div:nth-child(1) {
+    font-size: xxx-large;
+    color: rgb(237, 250, 53);
+    font-family: 'Quintessential', cursive;
+  }
+
+  #display {
+    width: 50%;
+    margin: auto;
+    margin-top: 30px;
+    display: flex;
+    justify-content: flex-start;
+    gap: 40px;
+    align-items: center;
+    font-size: xxx-large;
+    color: rgb(237, 250, 53);
+    font-family: 'Quintessential', cursive;
+    border-radius: 5px;
+    box-shadow: rgba(13, 68, 122, 0.2) 0px 8px 24px;
+
+  }
+
+
+
+  .DisplayImage {
+    width: 100%;
+    height: 100%;
+  }
+
+
+
+
+  #display h5 {
+    margin: 10px;
+  }
+
+  #display p {
+    margin: 10px;
+  }
+
+  #rating::after {
+    content: "⭐";
+  }
+
+  #notfound {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+  }
+
+  #notfound img {
+    width: 200px;
+    height: 200px;
+
+  }
+</style>
+
+<body>
+  <div class="main">
+    
+    <div class="main_container" data-aos="flip-up">
+      <div class="header" >
+        <img src="./asset/7jM3-unscreen.gif" style="width: 100px;" alt="" srcset="" class="head-img">
+        <h3 class="head-txt">Search Movies</h1>
+
+      </div>
+
+      <div class="search">
+        <div>
+          <input oninput="debounce(main,500)" type="text" id="query">
+
+        </div>
+        <div id="movies">
+          <!-- <button onclick="selectdisply() " id="clickmovies"></button> -->
+        </div>
+      </div>
+
+    </div>
+    <div id="display">
+      <!-- <div>heloo</div>
+  <div> he</div> -->
+    </div>
+    <div class="display2">
+
+    </div>
+  </div>
+
+
+
+</body>
+
+</html>
+
+<!-- <script src="/index.js"></script> -->
+<script src="index.js"></script>
+<script>
+  AOS.init();
+</script>
